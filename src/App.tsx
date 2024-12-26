@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
+import { RoutesDeclare } from './RoutesDeclare';
 
 function App() {
   return (
-    <>
-      <div className="flex flex-col items-center justify-center">
-        Coming Soon
-      </div>
-    </>
+    <RoutesDeclare />
   );
 }
 
