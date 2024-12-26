@@ -1,7 +1,7 @@
 {
   "name": "tukaianirban.github.io",
   "version": "0.1.0",
-  "homepage": "https://tukaianirban.github.io/tukaianirban.github.io",
+  "homepage": "https://tukaianirban.github.io",
   "private": true,
   "dependencies": {
     "cra-template-typescript": "1.2.0",
