@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;     /* LI elements will have no bullets in them */
+  text-decoration: none;  /* remove underlines for any links */
+}
+
+/* root variables for css to use anywhere */
+:root {
+  --color-bg: #111111;    /* background color of all pages */
+  --color-bg-page: #111111;
+  --color-bg-variant: #F8CA04;
+
+  --color-primary: #F8CA04;
+  --color-primary-variant: rgba(128, 128, 128);
+  --color-primary-accent: white;
+
+  --color-secondary: black;
+  --color-secondary-variant: rgba(128, 128, 128);
+  --color-secondary-accent: white;
+
+  /* button backgrounds */
+  --color-button-bg-primary: var(--color-primary);
+  --color-button-bg-secondary: black;
+  --color-button-bg-accent: var(--color-primary-variant);
+  
+  --color-button-border-primary: transparent;
+  --color-button-border-secondary: var(--color-primary);
+  --color-button-border-accent: transparent;
+
+  /* on main page as background */
+  --color-icon-primary: var(--color-primary);
+  --color-icon-primary-accent: black;
+  /* on button or tabs as background */
+  --color-icon-secondary: black;
+  --color-icon-secondary-accent: var(--color-primary);
+  --color-icon-primary-hover: white;
+  --color-icon-secondary-hover: white;
+
+  /* tab backgrounds */
+  --color-tab-bg-primary: #F8CA04;
+  --color-tab-bg-primary-accent: transparent;
+  --color-tab-bg-secondary: #b19104;
+  --colot-tab-bg-secondary-accent: transparent;
+
+  /* tab borders */
+  --color-tab-border-primary: transparent;
+  --color-tab-border-primary-accent: #F8CA04;
+  --color-tab-border-secondary: transparent;
+  --colot-tab-border-secondary-accent: #b19104;
+
+
+  --color-white: #ffffff;
+  --color-light: rgba(255,255,255,0.6);
+  --color-text-primary: black;
+  --color-text-secondary: white;
+  --color-text-secondary-dark: gray;
+  --color-text-accent: #F8CA04;
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;  /* container for individual components */
+  --container-width-md: 86%;  /* container size for medium devices */ 
+  --container-width-sm: 90%;  /* container size for small screen sizes */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* no scrollbar for the entire page */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-white);
+  line-height: 1.7;
+  background-image: url(../src/assets/bg-texture.png);
+  
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============== GENERAL STYLES =================== */
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto; /* vertical=0, horizontal=auto */
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;    /* multiples of the 'root em' => 2.5 * 16px */
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+
+section > h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+/* class definition */
+.text-light {
+  color: var(--color-light);
+}
+
+a {
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+/* on hover over anchor tag */
+a:hover {
+  color: var(--color-primary-accent);
+}
+
+/* primary button type */
+.btn {
+  width: max-content;   /* max width of the parent will be equal to the contents of its children */
+  display: inline-block;
+  padding: 0.75rem 1.2rem; /* vertial, horizontal */
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid;
+  transition: var(--transition);
+}
+
+/* yellow background with black text */
+.btn-primary {
+  background-color: var(--color-button-bg-primary);
+  color: var(--color-text-primary);
+  border-color: var(--color-button-border-primary);
+}
+
+/* primary button type: on hover, reverse the colors to make it feel transparent with the page bg */
+/* transparent background with yellow text with border */
+.btn-primary:hover {
+  background-color: var(--color-button-bg-accent);
+  color: var(--color-text-accent);
+  border-color: var(--color-button-border-accent);
+}
+
+/* black background with yellow text */
+.btn-secondary {
+  background: var(--color-button-bg-secondary);
+  color: var(--color-text-secondary);
+  border-color: var(--color-button-border-secondary);
+}
+
+/* yellow background with black text */
+.btn-secondary:hover {
+  background-color: var(--color-button-bg-accent);
+  color: var(--color-text-accent);
+  border-color: var(--color-button-border-accent);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover; /* how the image obkect fits into the view -> likely means both margins must be atleast equal or more */
+}
+
+/* ====================== MEDIA QUERIES ================= */
+/* Medium devices - tablets */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+/* Medium devices - mobile phones */
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  section > h2 {
+    margin-top: 2rem;
+  }
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+} */
