@@ -15,8 +15,10 @@ jobs:
 
     steps:
       - name: Exit if not on main branch
-        if: endsWith(github.event.ref, 'main') == false
-        run: exit -1
+        if: endsWith(github.event.base_ref, 'main') == false
+        run: |
+          echo {{ $github.event.base_ref }}
+          exit -1
 
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -41,5 +43,5 @@ jobs:
         env:
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
-          github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
+          github_token: "${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}"
           repository: ${{ github.repository }}
