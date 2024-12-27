@@ -1,0 +1,139 @@
+header {
+    /* 1vh = 1% of the height of viewport */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header__container {
+    padding-top: 5rem;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    grid-template-rows: 40% 60%;
+}
+
+.socials_cta__container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.intro_text {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+}
+
+/* =================== CTA ================ */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/* =================== HEADER SOCIALS ================ */
+.header__socials {
+    display: flex;
+    margin-top: 1rem;
+    /* flex-direction: column; */
+    align-self: flex-end;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__socials a {
+    font-size: 1.4rem;
+}
+
+.header__socials a:hover {
+    font-size: 2rem;
+}
+
+/* //TODO: need to understand what the hell this does !  */
+/* .header__socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+} */
+
+/* =================== IMAGE ================ */
+/*
+.me {
+    background: linear-gradient(var(--color-tab-bg-primary), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 2rem 0.2rem 0rem 0rem;
+}
+*/
+
+/* styling for ME pic holder */
+.about__me {
+    width: 90%;
+    /* height of pic holder container will always be equal to 1 */
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-primary));
+    /* so that the image can be placed at the center */
+    display: grid;
+    /* positioning the image */
+    place-items: center;
+    align-self: center;
+}
+
+.about__me-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.me__container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 10%;
+    height: 100%;
+    place-items: center;
+    vertical-align: middle;
+}
+
+/* =================== SCROLL DOWN ================ */
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* =================== MEDIA QUERIES ================ */
+/* Medium devices - tablets */
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+}
+
+/* Smaller devices - phones */
+@media screen and (max-width: 600px) {
+    header { 
+        height: 120vh;
+    }
+
+    .me__container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,162 @@
+/* styling for the entire container */
+.about__container {
+    gap: 10%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    /* height: 100vh; */
+}
+
+/* styling for ME pic holder */
+.about__me {
+    width: 100%;
+    /* height of pic holder container will always be equal to 1 */
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg, transparent, var(--color-primary));
+    /* so that the image can be placed at the center */
+    display: grid;
+    /* positioning the image */
+    place-items: center;
+    align-self: center;
+}
+
+/* styling for the right side context area of cards and text */
+.about__cards {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* each of the 3 cards */
+.about__card {
+    background: var(--color-tab-bg-primary);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+
+
+.about__card:hover {
+    background: var(--color-tab-bg-primary-accent);
+    border-color: var(--color-tab-border-primary-accent);
+    transition: var(--transition);
+    cursor: default;
+}
+
+/* the icon of each card */
+.about__icon {
+    color: var(--color-icon-secondary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about__card:hover .about__icon {
+    color: var(--color-icon-secondary-accent);
+}
+
+.about__card h3 {
+    text-align: center;
+    color: var(--color-text-primary);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.about__card:hover h3 {
+    text-align: center;
+    color: var(--color-text-accent);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.about__card h4 {
+    text-align: center;
+    color: var(--color-text-primary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.about__card:hover h4 {
+    text-align: center;
+    color: var(--color-text-accent);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.about__card h5 {
+    font-size: 0.95rem;
+    color: var(--color-text-primary-light);
+}
+
+.about__card:hover h5 {
+    color: var(--color-text-accent);
+}
+
+.about__card small {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.about__card:hover small {
+    color: var(--color-text-accent);
+}
+
+.about__container p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+/* =================== MEDIA QUERIES ================ */
+/* Medium devices - tablets */
+@media screen and (max-width: 1024px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about__me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .about__me p {
+        /* top horizontal bottom */
+        margin: 1rem 0 1.5rem; 
+    }
+}
+
+/* Smaller devices - phones */
+@media screen and (max-width: 600px) {
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr;
+        width: var(--container-width-sm);
+    }
+
+    .about_-content {
+        text-align: center;
+    }
+
+    .about__content p {
+        /* vertical horizontal */
+        margin: 1.5rem 0;
+    }
+}

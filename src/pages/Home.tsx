@@ -1,11 +1,16 @@
 import React from 'react';
+import About from './components/home_about/About.tsx';
+import Intro from './components/home_intro/Intro.tsx';
+import Recognitions from './components/home_recognitions/Recognitions.tsx';
+import Navigation from './components/home_navigation/Navigation.tsx';
 
 export const Home = () => {
     return (
         <>
-            <div className='flex h-screen w-screen items-center justify-center text-white'>
-                <a href='/projects'>Anirban Mukherjee</a>
-            </div>
+            <Intro />
+            <Navigation />
+            <About />
+            <Recognitions />
         </>
     );
 }

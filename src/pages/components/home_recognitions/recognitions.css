@@ -1,0 +1,137 @@
+/* the most external container - grid layout with some 
+    fractional unit padding on both axis */
+.cards__container {
+    gap: 10%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+/* styling for the right side context area of cards and text */
+.cards {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* each of the recognition cards */
+.card {
+    background: var(--color-tab-bg-primary);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    place-items: center;
+    cursor: default;
+}
+
+.card:hover {
+    background: var(--color-tab-bg-primary-accent);
+    border-color: var(--color-tab-border-primary-accent);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.card:hover .card__icon {
+    color: var(--color-icon-primary)
+}
+
+.card__empty {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.card__icon {
+    size: 128;
+    font-size: medium;
+    color: var(--color-icon-primary-accent);
+}
+
+.card__icon:hover {
+    color: var(--color-icon-primary)
+}
+
+.card h3 {
+    text-align: center;
+    color: var(--color-text-primary);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card:hover h3 {
+    text-align: center;
+    color: var(--color-text-accent);
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card h4 {
+    text-align: center;
+    color: var(--color-text-primary);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card:hover h4 {
+    text-align: center;
+    color: var(--color-text-accent);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.card h5 {
+    font-size: 0.95rem;
+    color: var(--color-text-primary-light);
+}
+
+.card:hover h5 {
+    color: var(--color-text-accent);
+}
+
+.card small {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.card:hover small {
+    color: var(--color-text-accent);
+}
+
+
+/* =================== MEDIA QUERIES ================ */
+/* Medium devices - tablets */
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+}
+
+/* Smaller devices - phones */
+@media screen and (max-width: 600px) {
+    .experience__container {
+        grid-gap: 1rem;
+    }
+
+    .experience__container > div {
+        width: 80%;
+        padding: 2rem 1rem;
+    }
+}
