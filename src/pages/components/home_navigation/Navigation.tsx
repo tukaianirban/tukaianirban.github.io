@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./navigation.css";
-import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
+import { AiOutlineHome } from 'react-icons/ai';
 import { BiBook } from 'react-icons/bi';
 import { FaAward } from "react-icons/fa";
 
@@ -11,7 +11,7 @@ const Navigation = () => {
   return (
     <nav>
       <a 
-        href='#'
+        href='#intro'
         onClick={() => setActiveNav('#')}
         className={activeNav === '#' ? 'active' : ''}><AiOutlineHome /></a>
       
