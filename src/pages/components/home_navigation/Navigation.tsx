@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./navigation.css";
 import { AiOutlineHome } from 'react-icons/ai';
 import { BiBook } from 'react-icons/bi';
-import { FaAward } from "react-icons/fa";
+import { FaAward, FaBusinessTime } from "react-icons/fa";
+
 
 const Navigation = () => {
 
@@ -15,6 +16,11 @@ const Navigation = () => {
         onClick={() => setActiveNav('#')}
         className={activeNav === '#' ? 'active' : ''}><AiOutlineHome /></a>
       
+      <a 
+        href='#projects'
+        onClick={() => setActiveNav('#projects')}
+        className={activeNav === '#projects' ? 'active' : ''}><FaBusinessTime /></a>
+
       <a 
         href='#about'
         onClick={() => setActiveNav('#about')}
