@@ -154,8 +154,8 @@ a:hover {
 .btn {
   width: max-content;   /* max width of the parent will be equal to the contents of its children */
   display: inline-block;
-  padding: 0.75rem 1.2rem; /* vertial, horizontal */
-  border-radius: 0.4rem;
+  padding: 0.75rem 2rem; /* vertial, horizontal */
+  border-radius: 4rem;
   cursor: pointer;
   border: 1px solid;
   transition: var(--transition);

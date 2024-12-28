@@ -10,7 +10,7 @@ export const Home = () => {
     return (
         <>
             <Intro />
-            {/* <Navigation /> */}
+            <Navigation />
             <Projects />
             <About />
             <Recognitions />

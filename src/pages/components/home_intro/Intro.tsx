@@ -10,7 +10,6 @@ const Intro = () => {
       <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1>Anirban Mukherjee</h1>
-        {/* <h3 className='text-light'>Engineering Leader</h3> */}
         
         <div className='container me__container'>
 
@@ -28,6 +27,9 @@ const Intro = () => {
             I am an Engineering Leader and Creator with a professional experience of over 15 years spanning
             across the telecommunications sector, IoT, FinTech and Blockchains.
             </p>
+
+            <br />
+            <br />
 
             {/* social media headers icons */}
             <IntroSocials />
